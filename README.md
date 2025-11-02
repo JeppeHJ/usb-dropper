@@ -14,12 +14,12 @@ This can be leveraged in a lot of really cool ways, but this tool is simply a pr
 
 ## Setup
 ### DNS-poisoning and NAT-steering
-- Alter `setup.sh` lines where `YOUR.WEBSERVER.IP` appears to point to your webserver
-- Transfer `setup.sh` to your Raspberry Pi
+- Alter `setup-dns-nat.sh` lines where `YOUR.WEBSERVER.IP` appears to point to your webserver
+- Transfer `setup-dns-nat.sh` to your Raspberry Pi
 - Run it with `sudo`
 
 ### Response injection
-- If you want to play around with response content injection, you will have to set up a `inject.py`-script and run `mitmproxy.sh`.
+- If you want to play around with response content injection, you will have to set up a `inject.py`-script and change settings in `mitmproxy.sh`.
 
 ### Captive Portal style redirection
-- If you want to play around with 302-redirection using nginx, you will have to replace the old DNAT:80 if you ran `setup.py` and run `captive.sh`.
+- If you want to play around with 302-redirection using nginx, you will have to change settings in `captive.sh`.
