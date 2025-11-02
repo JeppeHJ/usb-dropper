@@ -1,4 +1,4 @@
-This is a `Raspberry Pi Zero 2 W` project I developed to learn about Linux internals, and to explore what an adversary could potentially accomplish if they could leave a very small USB-device sitting in the USB-port of a Linux workstation.
+This is a `Raspberry Pi Zero 2 W` project I developed to learn about Linux internals, and to explore what an adversary could potentially accomplish if they could leave a very small USB-device sitting in the USB-port of a Linux workstation. Conclusion is you can do a lot of really cool stuff if any browsed websites don't have HTTPS or enforce HSTS :)
 
 ## Overview
 A single-plug demo tool that turns a Pi Zero 2 W into a USB Ethernet gadget. When plugged into a Linux workstation, it enumerates as a NIC, assigns the host an IP via DHCP/DNS, advertises classless routes so the host prefers the USB link, and NATs traffic out the Pi’s Wi-Fi. You can point DNS to a specific webserver and (optionally) redirect HTTP to a local service or pass it through an mitmproxy script for controlled, lab-only response modification.
