@@ -6,17 +6,17 @@ A single-plug demo tool that turns a `Raspberry Pi Zero 2` W into a **USB Ethern
 This can be leveraged in a lot of really cool ways, but this tool is simply a proof of concept that routes ALL traffic (through either DNS-poisoning, NAT-steering, response-injection or captive-portal style 302 redirection) to an attacker-controlled server. In a real engagement you would obviously do this in a more stealthy and sophisticated way.
 
 ## Pre-requisites
-- A Raspberry Pi Zero 2 W (older models can also do this but setup will differ slightly)
-- A SD card
-- USB-A ↔ micro-USB data (OTG) cable
-- A mobile hotspot/WiFi for the Pi to connect to
-- A Linux machine to test your cool hacker-tool on
+- A Raspberry Pi Zero 2 W (older models can also do this but setup will differ slightly).
+- A SD card.
+- USB-A ↔ micro-USB data (OTG) cable.
+- A mobile hotspot/WiFi for the Pi to connect to.
+- A Linux machine to test your cool hacker-tool on.
 
 ## Setup
 ### DNS-poisoning and NAT-steering
-- Alter `setup-dns-nat.sh` lines where `YOUR.WEBSERVER.IP` appears to point to your webserver
-- Transfer `setup-dns-nat.sh` to your Raspberry Pi
-- Run it with `sudo`
+- Alter `setup-dns-nat.sh` lines where `YOUR.WEBSERVER.IP` appears to point to your webserver.
+- Transfer `setup-dns-nat.sh` to your Raspberry Pi.
+- Run it with `sudo`.
 
 ### Response injection
 - If you want to play around with response content injection, you will have to set up a `inject.py`-script and change settings in `mitmproxy.sh`. 
