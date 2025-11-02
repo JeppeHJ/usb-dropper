@@ -2,7 +2,9 @@ This is a `Raspberry Pi Zero 2 W` project I developed to learn about Linux inter
 
 ## Overview
 A single-plug demo tool that turns a Pi Zero 2 W into a USB Ethernet gadget. When plugged into a Linux workstation, it enumerates as a NIC, assigns the host an IP via DHCP/DNS, advertises classless routes so the host prefers the USB link, and NATs traffic out the Pi’s Wi-Fi. You can point DNS to a specific webserver and (optionally) redirect HTTP to a local service or pass it through an mitmproxy script for controlled, lab-only response modification.
+
 This can be leveraged in a lot of cool ways and is particularly useful when combined with a reverse proxy phishing setup on attacker-controlled server. 
+
 This project is simply a proof of concept that routes ALL traffic (through either DNS-poisoning, NAT-steering, response-injection or captive-portal style 302 redirection) to an attacker-controlled server. In a real engagement you would obviously do this a lot more stealthy.
 
 ## Pre-requisites
