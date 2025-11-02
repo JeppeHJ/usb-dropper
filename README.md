@@ -1,11 +1,9 @@
-This is a `Raspberry Pi Zero 2 W` project I developed to learn about Linux internals, and to explore what an adversary could potentially accomplish if they could leave a very small USB-device sitting in the USB-port of a Linux workstation. Conclusion is you can do a lot of really cool stuff if any browsed websites don't have HTTPS or enforce HSTS :)
+This is a `Raspberry Pi Zero 2 W` project I developed to learn about Linux internals, and to explore what an adversary could potentially accomplish if they could leave a very small USB-device sitting in the USB-port of a Linux workstation. Conclusion is you can do a lot of really cool stuff if any browsed websites don’t use HTTPS or don’t enforce HSTS :) 
 
 ## Overview
-A single-plug demo tool that turns a Pi Zero 2 W into a USB Ethernet gadget. When plugged into a Linux workstation, it enumerates as a NIC, assigns the host an IP via DHCP/DNS, advertises classless routes so the host prefers the USB link, and NATs traffic out the Pi’s Wi-Fi. You can point DNS to a specific webserver and (optionally) redirect HTTP to a local service or pass it through an mitmproxy script for controlled, lab-only response modification.
+A single-plug demo tool that turns a `Raspberry Pi Zero 2` W into a **USB Ethernet gadget**. When plugged into a Linux workstation, it enumerates as a NIC, assigns the host an IP via DHCP/DNS, advertises classless routes so the host prefers the USB link, and NATs traffic out the Pi’s Wi-Fi. You can point DNS to a specific webserver and (optionally) redirect HTTP to a local service or pass it through an mitmproxy script for controlled, lab-only response modification.
 
-This can be leveraged in a lot of cool ways and is particularly useful when combined with a reverse proxy phishing setup on attacker-controlled server. 
-
-This project is simply a proof of concept that routes ALL traffic (through either DNS-poisoning, NAT-steering, response-injection or captive-portal style 302 redirection) to an attacker-controlled server. In a real engagement you would obviously do this a lot more stealthy.
+This can be leveraged in a lot of really cool ways, but this tool is simply a proof of concept that routes ALL traffic (through either DNS-poisoning, NAT-steering, response-injection or captive-portal style 302 redirection) to an attacker-controlled server. In a real engagement you would obviously do this in a more stealthy and sophisticated way.
 
 ## Pre-requisites
 - A Raspberry Pi Zero 2 W (older models can also do this but setup will differ slightly)
